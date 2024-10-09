@@ -1,0 +1,200 @@
+<!-- 
+Cô ơi, theo sitemap website của em thì contact không nằm trong phần sign up/sign in nên em viết tách ra contact riêng biệt nha cô.
+
+Nút gửi tin nhắn trong form đã có thể hoạt động tốt cô có thể kiểm tra ạ :3
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="./assets/css/contact-style.css">
+    <link rel="stylesheet" href="./assets/css/contact-resposive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Triệu Thiên</title>
+</head>
+
+<body>
+    <!-- Mesage -->
+    <div id="message"></div>
+
+    <div class="contact-info">
+        <div class="contact-info__email contact-container1">
+            <div class="contact-container1__left">
+                <i class="ti-email"></i>
+                <p>Email Address:</p>
+            </div>
+            <div class="separator"></div>
+            <a href="mailto:devsoftware.official@gmail.com">devsoftware.official@gmail.com</a>
+        </div>
+        <div class="contact-info__phone contact-container1">
+            <div class="contact-container1__left">
+                <i class="ti-mobile"></i>
+                <p>Number:</p>
+            </div>
+            <div class="separator"></div>
+            <a href="tel:+84986 126 942">0986 126 942</a>
+        </div>
+    </div>
+    <div class="contact-container">
+        <img src="./assets/images/contact-image.png" alt="Contact me!">
+        <div id="contact-form">
+            <form id="form">
+                <input id="user_name" class="get-text" name="username" type="text"
+                    placeholder="Enter your name"></input>
+                <input id="user_email" class="get-text" name="user_email" type="email"
+                    placeholder="Enter your email"></input>
+                <textarea id="user_message" class="get-text textarea-field" name="user_message" type="text"
+                    placeholder="Type your keyword"></textarea>
+
+            </form>
+            <input id="send-message-button" class="submit-button" type="submit" onclick="checkSendMessage()"
+                value="Send Message">
+        </div>
+    </div>
+    <script>
+        // Toast function
+        function toast({
+            title = "",
+            message = "",
+            type = "info    ",
+            duration = 1000,
+            delay = 3000,
+        }) {
+            const main = document.getElementById("message");
+
+            if (main) {
+                const toast = document.createElement("div");
+
+                // Auto remove toast
+                const autoRemoveId = setTimeout(function () {
+                    main.removeChild(toast);
+                }, duration + delay);
+
+                // Remove toast when click
+                toast.onclick = function (e) {
+                    if (e.target.closest(".toast__close")) {
+                        main.removeChild(toast);
+                        // clearTimeout - không thực hiện function autoRemoveId
+                        clearTimeout(autoRemoveId);
+                    }
+                };
+
+                const icons = {
+                    success: "fas fa-check-circle",
+                    warning: 'fa-sharp fa-solid fa-circle-exclamation',
+                    error: 'fa-sharp fa-solid fa-circle-xmark',
+                };
+
+                const icon = icons[type];
+                const timeDelay = (delay / 1000).toFixed(2);
+                const timeDuration = (duration / 1000).toFixed(2);
+                toast.classList.add("toast", `toast--${type}`);
+
+                /* forwards - stop at the end. */
+                toast.style.animation = `slideInLeft ease .5s, fadeOut linear ${timeDuration}s ${timeDelay}s forwards`;
+
+                toast.innerHTML = `
+                    <div class="toast__icon">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <div class="toast__title">${title}</div>
+                        <div class="toast__mgs">${message}</div>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                `;
+
+                main.appendChild(toast);
+            }
+        }
+
+        function showSuccessToast() {
+            toast({
+                title: "Đã gửi thông tin liên hệ!",
+                message: "Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ sớm liên lạc với bạn!",
+                type: "success",
+                duration: 1000,
+                delay: 3000,
+            });
+        }
+
+        function showWarningToast(infoWarning) {
+            toast ({
+            title: 'Chú ý',
+            message: infoWarning,
+            type: 'warning',
+            duration: 1000,
+            delay: 3000
+        })
+        }
+
+        function showErrorToast(infoError) {
+            toast({
+                title: 'Lỗi',
+                message: infoError,
+                type: 'error',
+                duration: 1000,
+                delay: 3000
+            })
+        }
+
+        function isEmptyForm() {
+            var form = document.getElementById("form");
+            var elements = form.elements;
+            var isEmpty = true;
+
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].type !== "button" && elements[i].value.trim() !== "") {
+                    isEmpty = false;
+                    break;
+                }
+            }
+            return isEmpty;
+        }
+
+        function checkSendMessage() {
+            var userNameElement = document.getElementById("user_name");
+            var userName = userNameElement.value;
+            // console.log(userName);
+
+            var userEmailElement = document.getElementById("user_email");
+            var userEmail = userEmailElement.value;
+            // console.log(userEmail);
+
+            var userMessageElement = document.getElementById("user_message");
+            var userMessage = userMessageElement.value;
+            // console.log(userMessage);
+
+            if (!isEmptyForm()) {
+                if (userName == "")
+                    showErrorToast("Vui lòng nhập tên của bạn!");
+    
+                else if (userEmail == "")
+                    showErrorToast("Vui lòng nhập email của bạn!");
+    
+                else if (!userEmailElement.validity.valid)
+                    showErrorToast("Vui lòng nhập đúng định dạng email.");
+    
+                else if (userMessage == "")
+                    showErrorToast("Vui lòng hãy nhập nội dung bạn muốn gửi đến chúng tôi nhé!");
+    
+                else
+                    showSuccessToast();
+            } else 
+                showWarningToast("Vui lòng nhập thông tin bạn nhé!");
+        }
+    </script>
+
+
+</body>
