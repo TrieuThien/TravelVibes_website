@@ -1,0 +1,147 @@
+a {
+    text-decoration: none;
+}
+
+
+.header {
+    background: #029E9D;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 2;
+}
+
+.header .navbar {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar .logo {
+    margin-left: 200px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    flex-grow: 1;
+}
+
+.navbar .actions {
+    margin: 0 30px 0 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul a {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.navbar .booking {
+    font-weight: 700;
+    padding: 15px 10px;
+    line-height: 26px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    color: #029E9D;
+    background-color: #fff;
+}
+
+.navbar .booking:hover {
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: #029E9D;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.navbar .actions-signin {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.navbar .actions-signup {
+    margin: 0 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+/* ss2 */
+.ss2 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.ss2 h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #f5a623;
+    margin: 0;
+}
+
+.ss2 h2 {
+    font-size: 36px;
+    color: #333;
+    margin: 10px 0 40px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: left;
+}
+
+.grid-item .overlay h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.grid-item .overlay p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    color: #f5a623;
+}
+
+.large {
+    width: 45%;
+}
+
+.small {
+    width: 20%;
+}
