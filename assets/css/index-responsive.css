@@ -1,0 +1,27 @@
+@media (max-width: 1048px) {
+    #header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #029E9D;
+    }
+    #header .navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header .navbar ul li {
+        display: block;
+        align-self: center;
+        margin: 8px 0;
+    }
+}
+
+@media (min-width: 1048px) {
+    #header .mobile-menu-btn {
+        display: none;
+    }
+}
