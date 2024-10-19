@@ -5,9 +5,15 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+:root {
+    --light: #f8f9fa;
+    --secondary: #6c757d;
+    --teal: #029E9D;
+}
+
 #header {
     position: relative;
-    background-color: #029E9D;
+    background-color: var(--teal);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -23,7 +29,8 @@ body {
 #header .navbar {
     display: flex;
     justify-content: space-between;
-    transition: opacity 1s;
+    transition: height 0.3s ease;
+    overflow: hidden;
 }
 
 #header .navbar ul {
@@ -34,6 +41,12 @@ body {
 #header .navbar ul li {
     list-style: none;
     display: inline-block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar.animate-down ul li {
+    opacity: 1;
 }
 
 #header .navbar ul li:not(:last-child):hover {
@@ -69,25 +82,28 @@ body {
     align-self: center;
     background-color: #fff;
     border-radius: 10px;
-    color: #029E9D;
-    border: 2px solid #029E9D;
+    color: var(--teal);
+    border: 2px solid var(--teal);
 }
 
 #header-action__booking:hover {
     cursor: pointer;
     border-radius: 10px;
-    background-color: #029E9D;
+    background-color: var(--teal);
     border: 2px solid #fff;
     color: #fff;
 }
 
 #header-action__account {
-    font-size: 48px;
-    margin-left: 12px;
+    font-size: 36px;
     align-self: center;
-    border: 2px solid #029E9D;
-    background-color: #029E9D;
-    color: #fff;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 12px;
+    background-color: #FFF;
+    color: var(--teal);
 }
 
 #header-action__account:hover {
@@ -156,10 +172,125 @@ body {
     animation: slideUp .2s ease-in-out;
 }
 
-.animate-down-delay1 {
-    animation: slideDown .2s ease-in-out .5s;
+/* Footer */
+#footer {
+    background: url("../images/footer.jpg") no-repeat center/cover;
+    color: var(--light);
 }
 
-.animate-up-delay1 {
-    animation: slideUp .2s ease-in-out .5s;
+#footer .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+#footer .container__destinations,
+#footer .container__categories,
+#footer .container__quick-links {
+    flex: 1;
+}
+
+#footer .container__categories {
+    margin: 0 20px;
+}
+#footer .container__get-mail {
+    flex: 2;
+}
+
+#footer .footer-item ul {
+    padding: 0;
+}
+
+#footer .footer-item ul li {
+    list-style-type: none;
+}
+
+#footer .footer-item ul li a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+#footer .footer-item ul li:not(:last-child) {
+    margin-bottom: 12px;
+} 
+
+#get-useremail,
+#submit-email-subscribe {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#get-useremail::placeholder {
+    color: var(--secondary);
+}
+
+#get-useremail:focus {
+    outline: none;
+    border: none;
+}
+
+#submit-email-subscribe {
+    margin-left: -12px;
+    background-color: var(--teal);
+    color: var(--light);
+    font-weight: 700;
+}
+
+#submit-email-subscribe:hover {
+    cursor: pointer;
+}
+
+#footer .below-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+#footer .below-container .below-container__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#footer .below-container .below-container__left img {
+    padding: 20px 0;
+    padding-right: 20px;
+}
+
+#footer .below-container .below-container__left p {
+    padding-left: 20px;
+    border-left: 2px solid var(--light);
+}
+
+#footer .below-container .below-container__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#footer .below-container__right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    margin: 0 12px;
+    background-color: #39445A;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+#footer .below-container__right a .fa-brands {
+    font-size: 16px;
 }
