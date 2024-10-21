@@ -1,0 +1,462 @@
+a {
+    text-decoration: none;
+}
+/* Reset margin và padding mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Menu container */
+  .menu {
+    background-color: teal;
+    display: flex; /* Sắp xếp các phần tử thành một hàng */
+    justify-content: space-between; /* Căn chỉnh các phần tử đều nhau */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    padding: 20px;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  /* Các mục menu */
+  .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  /* Nút "Booking Now" */
+  .booking-button {
+    background-color: white;
+    color: teal;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+.header {
+    background: #029E9D;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 2;
+
+}
+
+.navbar .logo {
+    margin-left: 200px;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    flex-grow: 1;
+}
+.navbar .actions {
+    margin: 0 30px 0 0;
+}
+.navbar ul a {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.navbar .booking {
+    font-weight: 700;
+    padding: 15px 10px;
+    line-height: 26px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    color: #029E9D;
+    background-color: #fff;
+}
+
+.navbar .booking:hover {
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: #029E9D;
+    transition: all 0.3s ease-in-out;
+}
+.navbar .actions-signin {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.navbar .actions-signup {
+    margin: 0 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.class .hero {
+    background-image: url('https://www.tugo.com.vn/wp-content/uploads/C07AXm9WIAEabMr-815x459.jpg');
+    background-image: cover;
+    padding: 100px;
+}
+
+.container {
+    background-color:#ccc;
+    background-color:cover;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e0f2f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #2ecc71; /* Màu xanh đậm */
+    color: #fff;
+    border-radius: 5px;
+}
+
+.search-bar button i {
+    font-size: 18px;
+}
+
+table {
+    background: green
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th .td {
+    background-color: #f2f2f2;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+  
+.th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.categories {
+    padding: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;
+}
+
+.user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user p {
+    color: black;
+    margin: 0;
+}
+
+.post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+  
+.quote {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+  
+.post p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+  
+.post h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+  
+.post ul {
+    list-style: none;
+    padding-left: 20px;
+}
+  
+.post ul li {
+    margin-bottom: 10px;
+}
+  
+.post ul li::before {
+    content: "\2022"; /* Bullet point */
+    color: #333;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.containers {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+  
+.image-containers {
+    width: 30%;
+    text-align: center;
+}
+  
+.image-containers img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+ }
+
+.posts {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+.tags {
+    margin-top: 10px;
+}
+  
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+  
+.share {
+    margin-top: 10px;
+}
+  
+.social-icon {
+    font-size: 18px;
+    margin-right: 5px;
+    color: #333;
+}
+  
+.comments {
+    margin-top: 20px;
+}
+  
+.comment {
+    display: flex;
+    margin-bottom: 15px;
+}
+  
+.comment img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+.comment-content {
+    flex: 1;
+}
+  
+.comment-content h4 {
+    margin-bottom: 5px;
+}
+  
+.tag-containers {
+    width: 30%;
+    padding: 20px;
+    background-color: #e0f2f1;
+    border-radius: 5px;
+}
+  
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+  
+.tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form {
+    background-color: #e0f2f1; /* Màu xanh nhạt */
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px; /* Điều chỉnh chiều rộng theo ý muốn */
+  }
+  
+.comment-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+  
+.comment-form button {
+    background-color: #2ecc71; /* Màu xanh đậm */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+  /* footer */
+.footer {
+    background-color: #1a2238;
+    padding: 40px 0;
+    color: #ffffff;
+}
+
+.footer .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .newsletter {
+    max-width: 300px;
+}
+
+.footer .newsletter p {
+    margin-bottom: 20px;
+}
+
+.footer .newsletter input[type="email"] {
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.footer .newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00bfa5;
+    color: #ffffff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer .newsletter button:hover {
+    background-color: #009688;
+}
+
+.footer .social-icons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer .social-icons a {
+    color: #b0b0b0;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    color: #ffffff;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footer .logo span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b0b0b0;
+}
