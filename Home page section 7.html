@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News & Articles</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.latest-articles {
+    text-align: center;
+    padding: 20px;
+}
+
+.latest-articles h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.article {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-10px);
+}
+
+.article-image {
+    position: relative;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.date-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffcc00;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.article-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.article-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.article-details {
+    margin-left: 10px;
+}
+
+.article-details .author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.article-details .role, .article-details .time {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.article p {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.article a {
+    display: block;
+    padding: 15px;
+    text-align: right;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.article a:hover {
+    color: #0077cc;
+}
+    </style>
+</head>
+<body>
+    <section class="latest-articles">
+        <h2>From The Blog Post <br> Latest News & Articles</h2>
+        <div class="articles-container">
+            <div class="article">
+                <div class="article-image">
+                    <img src="https://cdn.glitch.global/280ed750-31f9-4613-8bb6-ffc8c49d6fcc/z5953334851636_7600d8cc10505323c1e37b07899e11e7.jpg?v=1729510159642" alt="Hình ảnh bài viết 1">
+                    <div class="date-badge">04 Dec</div>
+                </div>
+                <div class="article-info">
+                    <img src="https://cdn.glitch.global/280ed750-31f9-4613-8bb6-ffc8c49d6fcc/Screenshot%202024-10-21%20183257.png?v=1729510421988" alt="Ảnh tác giả">
+                    <div class="article-details">
+                        <span class="author">Jony Bristow</span>
+                        <span class="role">Admin</span>
+                        <span class="time">10:30 AM</span>
+                    </div>
+                </div>
+                <p>A good traveler has no fixed plans and is not intent on arriving.</p>
+                <a href="#">Read More</a>
+            </div>
+            
+            <!-- Repeat this block for more articles -->
+            <div class="article">
+                <div class="article-image">
+                    <img src="https://cdn.glitch.global/280ed750-31f9-4613-8bb6-ffc8c49d6fcc/z5953334846873_330b0331f4dc0c04a27ca7a710c6c05d.jpg?v=1729510060525" alt="Hình ảnh bài viết 2">
+                    <div class="date-badge">04 Dec</div>
+                </div>
+                <div class="article-info">
+                    <img src="https://cdn.glitch.global/280ed750-31f9-4613-8bb6-ffc8c49d6fcc/Screenshot%202024-10-21%20183257.png?v=1729510421988" alt="Ảnh tác giả">
+                    <div class="article-details">
+                        <span class="author">Jony Bristow</span>
+                        <span class="role">Admin</span>
+                        <span class="time">10:30 AM</span>
+                    </div>
+                </div>
+                <p>A good traveler has no fixed plans and is not intent on arriving.</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <div class="article">
+                <div class="article-image">
+                    <img src="https://cdn.glitch.global/280ed750-31f9-4613-8bb6-ffc8c49d6fcc/z5953334837314_caaa7be62c1da7ae0ce87170be30cce7.jpg?v=1729510022986" alt="Hình ảnh bài viết 3">
+                    <div class="date-badge">04 Dec</div>
+                </div>
+                <div class="article-info">
+                    <img src="https://cdn.glitch.global/280ed750-31f9-4613-8bb6-ffc8c49d6fcc/Screenshot%202024-10-21%20183257.png?v=1729510421988" alt="Ảnh tác giả">
+                    <div class="article-details">
+                        <span class="author">Jony Bristow</span>
+                        <span class="role">Admin</span>
+                        <span class="time">10:30 AM</span>
+                    </div>
+                </div>
+                <p>A good traveler has no fixed plans and is not intent on arriving.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
