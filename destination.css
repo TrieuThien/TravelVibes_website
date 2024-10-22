@@ -103,79 +103,36 @@ a {
     color: #fff;
     font-weight: 700;
 }
-.container {
-    background-color:#ccc;
-    background-color:cover;
-    display: flex;
-    justify-content: space-between;
-}
-.class .banner {
+.class .hero {
     background-image: url('https://www.tugo.com.vn/wp-content/uploads/C07AXm9WIAEabMr-815x459.jpg');
     background-image: cover;
     padding: 100px;
 }
 
-.post {
-    width: 30%;
-    padding: 20px;
-    text-align: center;
+.image-container {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột bằng nhau */
-    gap: 20px;
-}
-.post img {
-    object-fit: cover;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .image-container img {
     grid-column: span 1;
-    border: 1px solid #f7f3f3;
-}
-
-.post-info {
-    margin-top: 10px;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-}
-
-.user img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.user-details {
-    display: flex;
-    flex-direction: column;
-}
-  
-.time {
-    margin-left: auto; /* Căn thời gian sang bên phải */
-  }
-
-.user p {
-    color: black;
-    margin: 0;
-}
-
-.read-more {
-    background: none;
-    border: none;
-    color: teal;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.3s ease;
   }
   
-  .read-more:hover {
-    color: #008080; /* Màu xanh đậm hơn khi hover */
+  .text-overlay {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
   }
-  
-  .arrow {
-    font-size: 18px;
-    margin-left: 5px;
+  .text-overlay p {
+    color: #FFD700; 
+  }
+
+ .text-overlay h3 {
+    color: white; 
   }
   
   /* footer */
