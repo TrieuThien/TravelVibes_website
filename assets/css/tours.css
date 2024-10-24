@@ -3,96 +3,6 @@ a {
 }
 
 
-.header {
-    background: #029E9D;
-    padding-top: 26px;
-    position: sticky;
-    top: -26px;
-    z-index: 2;
-}
-
-.header .navbar {
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.navbar .logo {
-    margin-left: 200px;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    margin-left: 0;
-    flex-grow: 1;
-}
-
-.navbar .actions {
-    margin: 0 30px 0 0;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul a {
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-}
-
-.navbar .booking {
-    font-weight: 700;
-    padding: 15px 10px;
-    line-height: 26px;
-    border: 2px solid #fff;
-    border-radius: 12px;
-    color: #029E9D;
-    background-color: #fff;
-}
-
-.navbar .booking:hover {
-    color: #fff;
-    border: 2px solid #fff;
-    background-color: #029E9D;
-    transition: all 0.3s ease-in-out;
-
-}
-
-.navbar .actions-signin {
-    color: #fff;
-    font-style: normal;
-    font-weight: 700;
-    margin-left: 20px;
-}
-
-.navbar .actions-signup {
-    margin: 0 20px;
-    color: #fff;
-    font-weight: 700;
-}
-
-/* Banner */
-/* .banner {
-    position: relative;
-}
-
-.banner::before {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    background: #029E9D;
-    opacity: 0.87;
-} */
-
 .banner {
     position: relative;
     /* Đặt vị trí tương đối cho banner */
@@ -174,13 +84,14 @@ a {
     margin-left: 10px;
 }
 
+/* 
 .card {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     overflow: hidden;
-    width: 30%;
+    width: calc(30% - 20px);
     display: inline-block;
     vertical-align: top;
 }
@@ -188,6 +99,37 @@ a {
 .card img {
     width: 100%;
     height: auto;
+} */
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    width: calc(30% - 20px);
+    /* 3 thẻ trong 1 hàng */
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+    /* Thêm hiệu ứng chuyển động */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Phóng to hình ảnh khi di chuột */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    /* Thêm hiệu ứng chuyển động cho hình ảnh */
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    /* Phóng to hình ảnh khi di chuột */
 }
 
 .card .badge {
@@ -248,6 +190,30 @@ a {
     background-color: #007bff;
     color: white;
     border: 1px solid #007bff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .sort {
+        float: none;
+        /* Đặt sort ở vị trí mặc định */
+        margin-top: 0;
+        /* Xóa khoảng cách âm trên */
+        text-align: center;
+        /* Căn giữa sort */
+    }
+
+    .card {
+        width: calc(100% - 20px);
+        /* 1 thẻ trong 1 hàng */
+        margin: 10px 0;
+        /* Giảm margin để tránh tràn */
+    }
+
+    .results {
+        margin-bottom: 10px;
+        /* Giảm khoảng cách cho các kết quả */
+    }
 }
 
 /* footer */

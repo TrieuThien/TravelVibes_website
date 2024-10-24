@@ -1,12 +1,123 @@
-@media (max-width: 1025px) {
-   
+@media (max-width: 1025px) {}
+
+@media (max-width: 700px) {}
+
+@media (max-width: 520px) {}
+
+
+/* about uss */
+
+/* Base styles remain the same */
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .navbar .logo {
+        margin-left: 100px;
+        /* Reduce logo margin */
+    }
+
+    .clients .content {
+        max-width: 70%;
+        /* Wider content on smaller screens */
+    }
+
+    .ss2 {
+        flex-direction: column;
+        /* Stack items vertically */
+    }
+
+    .text-content,
+    .image-content {
+        max-width: 100%;
+        /* Full width on smaller screens */
+    }
+
+    .stats {
+        flex-direction: column;
+        /* Stack stats vertically */
+        align-items: center;
+        /* Center align */
+    }
+
+    .team {
+        flex-direction: column;
+        /* Stack team members vertically */
+        align-items: center;
+        /* Center align */
+    }
 }
 
-@media (max-width: 700px) {
-   
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        /* Stack nav items vertically */
+        margin-left: 0;
+    }
+
+    .navbar .actions {
+        margin: 20px 0;
+        /* Adjust margin for actions */
+    }
+
+    .container h2 {
+        font-size: 36px;
+        /* Reduce heading size */
+    }
+
+    .clients .content h1 {
+        font-size: 36px;
+        /* Reduce heading size */
+    }
+
+    .info a {
+        font-size: 16px;
+        /* Smaller font size */
+    }
+
+    .button {
+        padding: 10px 20px;
+        /* Smaller button size */
+    }
+
+    .footer .item {
+        flex-direction: column;
+        /* Stack footer items */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .footer .newsletter input[type="email"] {
+        width: 100%;
+        /* Full width input on small screens */
+        margin-bottom: 10px;
+        /* Space below input */
+    }
+
+    .footer .social-icons {
+        flex-direction: column;
+        /* Stack social icons */
+        align-items: flex-start;
+        /* Align to start */
+    }
 }
 
-@media (max-width: 520px) {
-   
-}
+@media (max-width: 480px) {
+    .navbar .booking {
+        font-size: 16px;
+        /* Adjust button size */
+        padding: 10px 5px;
+        /* Adjust padding */
+    }
 
+    .footer h3 {
+        font-size: 16px;
+        /* Reduce footer heading size */
+    }
+
+    .footer .newsletter button {
+        width: 100%;
+        /* Full width button */
+        margin-top: 10px;
+        /* Space above button */
+    }
+}
