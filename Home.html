@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from tourest.webtravel.vn/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Oct 2024 15:33:33 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+    <title>Tourest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.html">
+    <link rel="stylesheet" href="../site-assets.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+    <link rel="stylesheet" href="lib/css/style.css">
+
+</head>
+
+<body>
+    <style> 
+        .topcontact {
+           display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        align-items: center;
+        font-weight: 600;
+        z-index:111;
+        transition:all .5s ease-in-out;
+    }
+    .contacthotel {
+        background: #0072bd;
+        z-index: 111111;
+        width: 100%;
+        transition:all .5s ease-in-out;
+    }
+    .order
+    {
+        display:flex;
+        color:#FFf;
+         align-items: center;
+        font-weight: 600;
+        z-index:111;
+    }
+    .topcontact a
+    {
+        color: #FFF;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .closetop {
+        padding-left: 10px;
+        color: #FFF;
+        z-index: 111;
+        background: transparent!important;
+    }
+    .topcontact .order a
+    {
+        padding: 5px 15px;
+        border-radius:5px;
+        background: #f8c218;
+        text-transform: lowercase;
+    }
+    body
+    {
+    transition:all .5s ease-in-out;
+    }
+    .contacthotel.fixedcontact {
+        position: fixed;
+        width: 100%;
+        z-index: 1111;
+        top: 0;
+        left: 0;
+    }
+    #header {
+        position: static;   
+    }
+    @media(max-width:425px)
+    {
+        .contacthotel {
+        position: fixed;
+        width: 100%;
+        z-index: 1111;
+        bottom: 0;
+        left: 0;
+    }
+    .contacthotel.fixedcontact {
+        position: fixed;
+        width: 100%;
+        z-index: 1111;
+        top: 95%;
+        left: 0;
+    }
+    .topcontact {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0px;
+        align-items: center;
+        font-weight: 600;
+        z-index: 111;
+        transition: all .5s ease-in-out;
+        font-size: 13px;
+    }
+    .topcontact .order a {
+        padding: 5px 5px;
+        border-radius: 5px;
+    }
+    }
+    </style>
+    <div class="contacthotel"> 
+		<div class="container">
+			<div class="topcontact">
+				<div class="back">
+					<a href="#" class="closetop">
+						&#10005;
+					</a>
+				</div>
+			
+			</div>
+			
+		</div>
+	</div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header-main">
+                    <a href="index.html" class="header-logo">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                    <button class="navbar-toggler">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse flex-grow-1 collapse">
+                        <nav class="navbar">
+                            <ul class="nav-list">
+                                <li class="nav-item active">
+                                    <a href="index.html" class="nav-link">
+                                        home
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="about.html" class="nav-link">
+                                        about us
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="tours.html" class="nav-link">
+                                        tours
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="destinations.html" class="nav-link">
+                                        destinations
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="blog.html" class="nav-link">
+                                        blog
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">
+                                        contact us
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="booking-button">
+                            <a href="booking.html" class="btn btn-primary btn-white">booking now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main class="main">
+        <section class="section-spacing features">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-md-7 col-lg-5">
+                        <div class="section-title mb-0">
+                            <h3 class="mt-n6 animate__animated animate__slideInRight">Love where you're going</h3>
+                            <h2 class=" animate__animated animate__slideInRight">Learn new things by traveling the world.</h2>
+                        </div>
+                        <p class=" animate__animated animate__slideInRight">
+                            Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                        <div class="play-button animate__animated animate__slideInRight">
+                            <a href="#">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                        <div class="features-items animate__animated animate__slideInRight">
+                            <div class="features-item animate__animated animate__slideInRight">
+                                <h3>
+                                    <span class="counter">500</span>k
+                                </h3>
+                                <h4 class="mb-0">Our local guides</h4>
+                            </div>
+                            <div class="features-item animate__animated animate__slideInRight">
+                                <h3>
+                                    <span class="counter">100</span>%
+                                </h3>
+                                <h4 class="mb-0">Trusted tour agency</h4>
+                            </div>
+                            <div class="features-item animate__animated animate__slideInRight">
+                                <h3>
+                                    <span class="counter">99</span>%
+                                </h3>
+                                <h4 class="mb-0">Travel happiness</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-spacing tours">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h3 class="mt-n6">Featured Tours</h3>
+                            <h2 class="">Most Popular Tours</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 animate__animated animate__slideInRight">
+                        <a href="details-tours.html">
+                            <div class="card tour-card wow fadeIn">
+                                <img src="images/tour1.png" alt="">
+                                <span class="tour-duration">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
+                                    12 Days
+                                </span>
+                                <div class="card-body">
+                                    <div class="tour-tags">
+                                        <span class="tour-price">From $50.00</span>
+                                        <span class="tour-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            (2)
+                                        </span>
+                                    </div>
+                                    <h6>A good traveler has no fixed plans and is not intent on arriving.</h6>
+                                    <p class="mb-0">Kuala Lumpur, Malaysia</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 animate__animated animate__slideInRight">
+                        <a href="details-tours.html">
+                            <div class="card tour-card wow fadeIn">
+                                <img src="images/tour2.png" alt="">
+                                <span class="tour-duration">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
+                                    12 Days
+                                </span>
+                                <div class="card-body">
+                                    <div class="tour-tags">
+                                        <span class="tour-price">From $50.00</span>
+                                        <span class="tour-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            (2)
+                                        </span>
+                                    </div>
+                                    <h6>A good traveler has no fixed plans and is not intent on arriving.</h6>
+                                    <p class="mb-0">Kuala Lumpur, Malaysia</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 animate__animated animate__slideInRight">
+                        <a href="details-tours.html">
+                            <div class="card tour-card wow fadeIn">
+                                <img src="images/tour3.png" alt="">
+                                <span class="tour-duration">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
+                                    12 Days
+                                </span>
+                                <div class="card-body">
+                                    <div class="tour-tags">
+                                        <span class="tour-price">From $50.00</span>
+                                        <span class="tour-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            (2)
+                                        </span>
+                                    </div>
+                                    <h6>A good traveler has no fixed plans and is not intent on arriving.</h6>
+                                    <p class="mb-0">Kuala Lumpur, Malaysia</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a href="#" class="scrollup">
+            <i class="fa-sharp fa-solid fa-angle-up"></i>
+        </a>
+    
+        <script src="lib/js/jquery-3.6.0.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="lib/js/style.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    </main>
+</body>    
