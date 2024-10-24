@@ -1,12 +1,11 @@
-@media (max-width: 1025px) {
-   
-}
+@media (max-width: 450px) {
+    .formDangKyDangNhap {
+        margin-top: 30%;
+        max-width: 200px;
+    }
 
-@media (max-width: 700px) {
-   
-}
-
-@media (max-width: 520px) {
-   
+    .formDangKyDangNhap .input-label .input-field { 
+        min-width: 90%;
+    }
 }
 
