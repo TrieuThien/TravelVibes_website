@@ -109,6 +109,873 @@
         border-radius: 5px;
     }
     }
+    @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;family=Comforter+Brush&amp;family=Heebo:wght@300;400;500;600;700;800;900&amp;display=swap");
+@font-face {
+  font-family: Abril Fatface;
+  src: url("../font/AbrilFatface-Regular.ttf");
+}
+@font-face {
+  font-family: Comforter Brush;
+  src: url("../font/ComforterBrush-Regular.ttf");
+}
+@font-face {
+  font-family: Heebo;
+  src: url("../font/Heebo-VariableFont_wght.ttf");
+}
+#worker_1 {
+  display: none;
+}
+
+.header {
+  position: relative;
+  background-color: var(--primary-color);
+  padding: 20px 0;
+}
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-main .navbar {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-main .navbar .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  width: 100%;
+}
+.header-main .navbar .nav-list .nav-item {
+  position: relative;
+  margin-left: 40px;
+}
+.header-main .navbar .nav-list .nav-item:first-child {
+  margin-left: 0;
+}
+.header-main .navbar .nav-list .nav-item::before {
+  width: 36px;
+  height: 36px;
+  background: #028B8A;
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.header-main .navbar .nav-list .nav-item.active::before, .header-main .navbar .nav-list .nav-item:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.header-main .navbar .nav-list .nav-item .nav-link {
+  padding: 13px 0px;
+  font-size: 18px;
+  color: #fff;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .header-main .navbar .nav-list {
+    flex-direction: row;
+  }
+}
+.header-main .navbar-toggler {
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.15s ease-in-out;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+.header-main .navbar-toggler-icon {
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  vertical-align: middle;
+}
+.header-main .navbar-toggler-icon::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -11px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 4px;
+  transition: all 0.35s ease-out;
+  -webkit-transition: all 0.35s ease-out;
+  backface-visibility: hidden;
+}
+.header-main .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -11px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 4px;
+  transition: all 0.35s ease-out;
+  -webkit-transition: all 0.35s ease-out;
+  backface-visibility: hidden;
+}
+.header-main .navbar-toggler.collapsed .navbar-toggler-icon {
+  background: rgba(0, 0, 0, 0);
+}
+.header-main .navbar-toggler.collapsed .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.header-main .navbar-toggler.collapsed .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+@media (min-width: 992px) {
+  .header-main .navbar-toggler {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .header-main .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+}
+@media (max-width: 991px) {
+  .header-main .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 10;
+    padding: 15px;
+    display: none;
+  }
+  .header-main .navbar-collapse .navbar .nav-list .nav-item {
+    margin-left: 0px;
+    display: block;
+  }
+  .header-main .navbar-collapse .booking-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.banner {
+  position: relative;
+  background: url("../../images/bottom-left.png") no-repeat left bottom;
+  width: 100%;
+  height: auto;
+}
+.banner-slide {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: url("../../images/banner-top-right.png") no-repeat top right;
+  background-size: 40% auto;
+}
+.banner-slide .banner-item {
+  height: auto;
+  display: none;
+}
+.banner-slide .banner-item .banner-caption {
+  width: 100%;
+  padding: 90px 0;
+}
+.banner-slide .banner-item .banner-caption h3 {
+  animation-delay: 0.4s;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .banner-slide .banner-item .banner-caption h3 {
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-slide .banner-item .banner-caption h3 {
+    font-size: 20px;
+  }
+}
+.banner-slide .banner-item .banner-caption h1 {
+  animation-delay: 0.8s;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .banner-slide .banner-item .banner-caption h1 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-slide .banner-item .banner-caption h1 {
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+}
+.banner-slide .banner-item .banner-caption p {
+  animation-delay: 1s;
+  color: #686d7a;
+  margin: 0 0 40px;
+  font-size: 18px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .banner-slide .banner-item .banner-caption p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-slide .banner-item .banner-caption p {
+    margin: 15px 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .banner-slide .banner-item .banner-caption p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.banner-slide .banner-item .banner-caption a {
+  animation-delay: 1.2s;
+}
+.banner-slide .banner-item .banner-caption .banner-button-group .btn-primary.learn-more {
+  margin-left: 0;
+}
+@media (max-width: 767.98px) {
+  .banner-slide .banner-item .banner-caption .banner-img {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-slide .banner-item .banner-caption {
+    padding: 20px 0;
+  }
+}
+.banner-slide .owl-item.active .banner-item {
+  display: block;
+}
+.banner-slide .owl-nav .owl-prev,
+.banner-slide .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  z-index: 1;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 1;
+  transition: opacity 0.15s ease;
+  height: 40px;
+  background: #029E9D !important;
+  border-radius: 5px;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.banner-slide .owl-nav .owl-prev:focus, .banner-slide .owl-nav .owl-prev:hover,
+.banner-slide .owl-nav .owl-next:focus,
+.banner-slide .owl-nav .owl-next:hover {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+.banner-slide .owl-nav .owl-prev span,
+.banner-slide .owl-nav .owl-next span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+}
+.banner-slide .owl-nav .owl-prev {
+  left: 15px;
+}
+.banner-slide .owl-nav .owl-next {
+  right: 15px;
+}
+.banner-slide:hover .owl-prev,
+.banner-slide:hover .owl-next {
+  opacity: 1;
+  visibility: visible;
+}
+.banner .shape1 {
+  position: absolute;
+  right: 40px;
+  top: 20%;
+  animation: rotate 9s linear infinite;
+}
+.banner .shape2 {
+  position: absolute;
+  right: 48%;
+  top: 10%;
+  animation: rotate 9s linear infinite;
+}
+.banner .shape3 {
+  position: absolute;
+  right: 55%;
+  bottom: 25%;
+  animation: transitionRotate 9s linear infinite;
+}
+
+.hero-text {
+  width: 100%;
+  float: left;
+  height: auto;
+  max-width: 550px;
+  margin-top: 15px;
+}
+
+.banner-button-group {
+  display: flex;
+  gap: 15px !important;
+  flex-wrap: wrap;
+}
+
+.section-spacing.features {
+  background-image: url("../../images/features.png");
+  background-size: cover;
+  background-position: center center;
+}
+.section-spacing.features .play-button {
+  margin: 15px 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.section-spacing.features .play-button a {
+  position: relative;
+  display: inline-block;
+}
+.section-spacing.features .play-button a::before, .section-spacing.features .play-button a::after {
+  content: "";
+  display: block;
+  height: 60px;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  z-index: 0;
+}
+.section-spacing.features .play-button a::after {
+  animation: bounce 1.5s linear infinite;
+}
+.section-spacing.features .play-button a i {
+  display: inline-block;
+  background: #029E9D;
+  line-height: 60px;
+  border: 20px solid #d1e9e8;
+  border-radius: 50%;
+  width: 100px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  z-index: 6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.section-spacing.features .features-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 0;
+}
+.section-spacing.features .features-items h3 {
+  font-size: 34px;
+  color: #029E9D;
+  font-family: "Heebo", sans-serif;
+  font-weight: 600;
+}
+.section-spacing.features .features-items h4 {
+  font-size: 18px;
+  color: #666;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section-spacing.features {
+    background-position: right center;
+  }
+}
+@media (max-width: 576px) {
+  .section-spacing.features {
+    background-image: none !important;
+    background-color: #fcfcfc;
+  }
+}
+
+.footer {
+  width: 100%;
+  float: left;
+  height: auto;
+  padding: 70px 0;
+  background: #17233E url("../../images/footer-bg.png") no-repeat top center;
+}
+.footer .footer-widget {
+  width: 100%;
+  float: left;
+  height: auto;
+  margin: 0 0 30px;
+}
+.footer .footer-widget h5 {
+  color: #fff;
+  margin: 0 0 30px;
+  font-family: "Heebo", sans-serif;
+}
+.footer .footer-widget p {
+  color: #fff;
+  opacity: 0.8;
+  margin: 0;
+}
+@media (max-width: 767.98px) {
+  .footer .footer-widget p {
+    font-size: 14px;
+  }
+}
+.footer ul {
+  width: 100%;
+  float: left;
+}
+.footer ul li {
+  width: 100%;
+  float: left;
+  margin: 0 0 12px;
+}
+.footer ul li a {
+  color: #fff;
+  opacity: 0.8;
+}
+@media (max-width: 767.98px) {
+  .footer ul li {
+    font-size: 14px;
+  }
+}
+.footer .subcribe-form {
+  position: relative;
+  height: 74px;
+  margin-top: 30px;
+}
+.footer .subcribe-form input {
+  font-size: 16px;
+  font-weight: 400;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s ease-out;
+  height: 100%;
+  color: #B9B9B9;
+  padding: 20px;
+}
+.footer .subcribe-form button {
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  background-color: #029E9D;
+  height: 100%;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+.footer .footer-left {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-left img {
+  width: 196px;
+  height: auto;
+}
+.footer .footer-left .h-border {
+  margin: 0 30px;
+  height: 40px;
+  border: 1px solid #818A9F;
+}
+.footer .footer-left .copyright p {
+  margin: 0;
+  color: #fff;
+  line-height: 30px;
+  opacity: 0.8;
+}
+@media (max-width: 767.98px) {
+  .footer .footer-left .copyright p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+}
+.footer .team-social {
+  display: flex;
+  gap: 10px;
+}
+.footer .team-social li {
+  width: 34px;
+}
+.footer .team-social li a {
+  width: 34px;
+  height: 34px;
+  background-color: #E1E1E1;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #878787;
+  background-color: #414C61 !important;
+  color: #fff !important;
+}
+@media (max-width: 767.98px) {
+  .footer .team-social {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 50px 0;
+  }
+}
+
+.scrollup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  line-height: 40px;
+  background: #029E9D;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  z-index: 99;
+  display: none;
+}
+.scrollup.activate {
+  display: block;
+}
+.scrollup.activate:hover {
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.tours {
+  padding: 100px 0;
+}
+.tours .custom-select {
+  display: block;
+  width: auto;
+  padding: 0;
+  border: 0;
+}
+.tours .custom-select select {
+  height: 100%;
+  color: #878787;
+  width: 98px;
+}
+.tours .custom-select .nice-select {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 15px;
+  border-radius: 4px;
+  border: 1px solid #E1E1E1;
+}
+.tours .custom-select .nice-select::after {
+  height: 8px;
+  right: 15px;
+  width: 8px;
+  top: 45%;
+}
+.tours .pagination-container {
+  margin: 40px 0 0;
+}
+
+.pagination-container {
+  width: 100%;
+  float: left;
+  height: auto;
+  margin: 30px 0 0;
+}
+.pagination-container .pagination {
+  margin: 0;
+  justify-content: center;
+}
+.pagination-container .pagination li > a, .pagination-container .pagination li > span {
+  margin-left: 5px;
+  padding: 10px 10px;
+  border-radius: 4px !important;
+  color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  width: 44px;
+  line-height: 22px;
+  border: 1px solid #f5f5f5;
+  display: inline-block;
+  text-align: center;
+}
+.pagination-container .pagination li:first-child a {
+  margin: 0;
+}
+.pagination-container .pagination > .active > a,
+.pagination-container .pagination > .active > a:focus,
+.pagination-container .pagination > .active > a:hover,
+.pagination-container .pagination > .active > span,
+.pagination-container .pagination > .active > span:focus,
+.pagination-container .pagination > .active > span:hover,
+.pagination-container .pagination > li > a:focus,
+.pagination-container .pagination > li > a:hover,
+.pagination-container .pagination > li > span:focus,
+.pagination-container .pagination > li > span:hover {
+  background-color: #029E9D;
+  border-color: #029E9D;
+  color: #fff;
+}
+
+.list-tour-group .tour-card {
+  display: block;
+  z-index: 1;
+}
+.list-tour-group .item.list-group-item {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border: none;
+}
+.list-tour-group .item.list-group-item .tour-card {
+  display: flex;
+  flex-direction: unset;
+  margin-bottom: 0;
+}
+.list-tour-group .item.list-group-item .tour-card img {
+  width: 40%;
+}
+@media (max-width: 991px) {
+  .list-tour-group .item.list-group-item .tour-card img {
+    width: 50%;
+  }
+}
+
+.tour-main-list {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.search-form {
+  background: #D6EEED;
+  border-radius: 5px;
+  padding: 30px;
+}
+.search-form .input-group {
+  position: relative;
+  margin-top: 20px;
+}
+.search-form .input-group i {
+  top: 50%;
+  font-size: 14px;
+  color: #95989A;
+  z-index: 11;
+  position: absolute;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.search-form .input-group i.icon-right {
+  left: auto;
+  right: 16px;
+  font-size: 12px;
+}
+.search-form .input-group .nice-select {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 46px;
+  color: #878787;
+  border-radius: 0;
+  border: 1px solid #A4CECC;
+}
+.search-form .input-group .nice-select::after {
+  height: 8px;
+  right: 15px;
+  width: 8px;
+  top: 45%;
+}
+.search-form .input-group .start-date {
+  padding: 19px 20px;
+  font-size: 14px;
+  color: #8D8E92;
+  padding-left: 45px;
+}
+.search-form .input-group .form-control {
+  height: auto;
+  border: 1px solid #A4CECC;
+}
+.search-form .input-group .btn {
+  width: 100%;
+}
+
+.search-box {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 40px;
+}
+.search-box .price-range-slider {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.search-box .price-range-slider .range-value {
+  margin: 0;
+}
+.search-box .price-range-slider .range-value input {
+  width: 100%;
+  background: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: initial;
+  box-shadow: none;
+  border: none;
+  margin: 20px 0 20px 0;
+}
+.search-box .price-range-slider .range-bar {
+  border: none;
+  background: #D6EEED;
+  height: 4px;
+  width: 100%;
+  margin-left: 8px;
+  margin-top: 25px;
+}
+.search-box .price-range-slider .range-bar .ui-slider-range {
+  background: #06b9c0;
+}
+.search-box .price-range-slider .range-bar .ui-slider-handle {
+  border: none;
+  border-radius: 25px;
+  background: #fff;
+  border: 2px solid #06b9c0;
+  height: 17px;
+  width: 17px;
+  top: -0.52em;
+  cursor: pointer;
+}
+.search-box .price-range-slider .range-bar .ui-slider-handle:hover, .search-box .price-range-slider .range-bar .ui-slider-handle:focus {
+  outline: none;
+}
+.search-box .review-box {
+  margin-bottom: 30px;
+}
+.search-box .review-box .review-form {
+  margin-top: 20px;
+}
+.search-box .review-box .form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
+}
+.search-box .review-box .form-check .form-check-input {
+  border-radius: 0.25em;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  float: left;
+  margin-left: -1.5em;
+}
+.search-box .review-box .form-check .form-check-label i {
+  color: #FFA801;
+  margin-left: 5px;
+}
+.search-box .category-box ul {
+  margin-top: 20px;
+}
+.search-box .category-box ul li a {
+  color: #878787;
+  line-height: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.tour-bar-row {
+  margin-bottom: 50px !important;
+}
+
+.tour-bar-text {
+  color: #878787;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.tour-bar-icon i {
+  color: #878787;
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  padding: 13.5px;
+  margin-left: 10px;
+}
+
+.discount-offer {
+  margin-top: 40px;
+}
+.discount-offer img {
+  width: 100%;
+}
+
+.custom-select select {
+  height: 100%;
+  color: #878787;
+  width: 98px;
+}
+
+.box-title {
+  color: #17233E;
+  font-family: "Heebo", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 12px;
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 14px;
+}
     </style>
     <div class="contacthotel"> 
 		<div class="container">
@@ -314,18 +1181,149 @@
             <i class="fa-sharp fa-solid fa-angle-up"></i>
         </a>
     
-        <script src="lib/js/jquery-3.6.0.min.js"></script>
-        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="../cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
-        <script src="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="../cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-        <script src="../cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-        <script src="../cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-        <script src="../cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        <script src="lib/js/style.js"></script>
-        <script>
-            new WOW().init();
-        </script>
-    </main>
-</body>    
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 animate__animated animate__slideInUp">
+                        <div class="footer-widget">
+                            <h5>Top destination</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">Indonesia, Jakarta</a>
+                                </li>
+                                <li>
+                                    <a href="#">Maldives, Malé</a>
+                                </li>
+                                <li>
+                                    <a href="#">Australia, Canberra</a>
+                                </li>
+                                <li>
+                                    <a href="#">Thailand, Bangkok</a>
+                                </li>
+                                <li>
+                                    <a href="#">Morocco, Rabat</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 animate__animated animate__slideInUp">
+                        <div class="footer-widget">
+                            <h5>Categories</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">Travel</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lifestyle</a>
+                                </li>
+                                <li>
+                                    <a href="#">Fashion</a>
+                                </li>
+                                <li>
+                                    <a href="#">Education</a>
+                                </li>
+                                <li>
+                                    <a href="#">Food &amp; Drink</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 animate__animated animate__slideInUp">
+                        <div class="footer-widget">
+                            <h5>Quick links</h5>
+                            <ul>
+                                <li>
+                                    <a href="about-us.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="tours.html">Tours</a>
+                                </li>
+                                <li>
+                                    <a href="booking.html">Booking</a>
+                                </li>
+                                <li>
+                                    <a href="terms-conditions.html">Terms &amp; Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 animate__animated animate__slideInUp">
+                        <div class="footer-widget">
+                            <h5>Get a newsletter</h5>
+                            <p>For the latest deals and tips, travel no further than your inbox</p>
+                            <form action="#" class="subcribe-form">
+                                <input type="text" class="form-control" placeholder="Email address">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-9 col-md-8">
+                        <div class="footer-left">
+                            <img src="images/footer-logo.png" alt="">
+                            <div class="h-border"></div>
+                            <div class="copyright">
+                                <p>© 2022 All Right Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <ul class="team-social footer-social">
+                            <li class="share-icon">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="share-icon">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="share-icon">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="share-icon">
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="share-icon">
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="#" class="scrollup">
+        <i class="fa-sharp fa-solid fa-angle-up"></i>
+    </a>
+
+    <script src="lib/js/jquery-3.6.0.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="lib/js/style.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+
+<!-- Mirrored from tourest.webtravel.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Oct 2024 15:41:21 GMT -->
+</html>
