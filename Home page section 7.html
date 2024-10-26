@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,94 +7,110 @@
     <title>Latest News & Articles</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
-.latest-articles {
+
+h2 {
     text-align: center;
-    padding: 20px;
-}
-.latest-articles h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: bold;
+    margin: 20px 0;
     color: #333;
 }
+
+.latest-articles {
+    padding: 20px;
+}
+
 .articles-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .article {
-    width: 30%;
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
-    overflow: hidden;
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    position: relative;
     transition: transform 0.3s ease;
 }
+
 .article:hover {
     transform: translateY(-10px);
 }
-.article-image {
-    position: relative;
-}
-.article-image img {
+
+.article img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
+
 .date-badge {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #ffcc00;
+    background-color: #ffc107;
     padding: 5px 10px;
+    border-radius: 5px;
     font-size: 0.9rem;
-    font-weight: bold;
     color: #fff;
-    border-radius: 3px;
 }
+
 .article-info {
     display: flex;
     align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #eee;
+    margin-top: 15px;
 }
+
 .article-info img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
+
 .article-details {
     margin-left: 10px;
 }
+
 .article-details .author {
-    font-size: 1rem;
     font-weight: bold;
-    color: #333;
 }
-.article-details .role, .article-details .time {
-    font-size: 0.85rem;
+
+.article-details .role {
     color: #888;
+    font-size: 0.9rem;
 }
+
+.article-details .time {
+    color: #888;
+    font-size: 0.8rem;
+}
+
 .article p {
-    padding: 15px;
-    font-size: 0.95rem;
-    color: #333;
+    margin: 15px 0;
+    color: #555;
 }
+
 .article a {
-    display: block;
-    padding: 15px;
-    text-align: right;
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: #00aaff;
     text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
 }
+
 .article a:hover {
-    color: #0077cc;
+    text-decoration: underline;
 }
     </style>
 </head>
@@ -117,9 +134,7 @@
                 <p>A good traveler has no fixed plans and is not intent on arriving.</p>
                 <a href="#">Read More</a>
             </div>
-            
-            <!-- Repeat this block for more articles -->
-            <div class="article">
+                        <div class="article">
                 <div class="article-image">
                     <img src="https://cdn.glitch.global/280ed750-31f9-4613-8bb6-ffc8c49d6fcc/z5953334846873_330b0331f4dc0c04a27ca7a710c6c05d.jpg?v=1729510060525" alt="Hình ảnh bài viết 2">
                     <div class="date-badge">04 Dec</div>
