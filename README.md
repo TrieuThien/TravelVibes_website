@@ -6,4 +6,5 @@
 
 2. Để trải nghiệm các tính năng của webstite mà không bị lỗi từ chối truy cập từ mongoDB.
    Hiện tại website đã được deploy, hãy truy cập website của chúng tôi tại địa chỉ: https://tourest-website.onrender.com/
+
    NOTE: Do đang sử dụng máy chủ web free nên sau một thời gian không sử dụng thì máy chủ sẽ tắt, lần truy cập tiếp theo sẽ mất khoản 1 phút để vào được webstie và truy cập bình thường. 
