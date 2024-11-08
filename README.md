@@ -1,3 +1,5 @@
+**TOUREST WEBSITE**
+
 1. Sau khi pull code về, tại thư mục gốc của dự án, thực hiện câu lệnh bên dưới để chạy dự án nodejs - website tourest bằng localhost:
    
     node src/index.js
